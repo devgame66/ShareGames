@@ -1,480 +1,418 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="BitCore Games — Mobile Gaming Studio. Action, Simulation, Racing and Fighting games enjoyed by millions worldwide." />
-  <meta property="og:title" content="BitCore Games — Mobile Gaming Studio" />
-  <meta property="og:description" content="From Hunting Simulators to Robot Fighting — BitCore Games delivers thrilling mobile experiences to millions of players worldwide." />
-  <meta property="og:type" content="website" />
-  <title>BitCore Games — Mobile Gaming Studio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fun Shooting Games — Mobile FPS Studio | 170M+ Downloads</title>
+<meta name="description" content="Fun Shooting Games is a mobile game studio behind Gun Strike, Special Ops, Zombie 3D Gun Trigger and Sniper 3D — action FPS titles played by over 170 million players worldwide.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.bitcoregame.com/">
+<meta property="og:title" content="Fun Shooting Games — Mobile FPS Studio">
+<meta property="og:description" content="Action-packed mobile FPS games played by 170M+ players worldwide. Download free on Google Play.">
+<meta property="og:image" content="https://play-lh.googleusercontent.com/qedpyT9UaYsk8xUUWRal-ro4zCLX4tZKIiXlQQqZul9Yp0k7ote0J---jMmmTHZmeJdwF4-Q8eI3rz6kGTNL0hM=w512">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='28' fill='none' stroke='%23ff6a00' stroke-width='5'/%3E%3Ccircle cx='32' cy='32' r='7' fill='%23ff6a00'/%3E%3Cpath d='M32 2v14M32 48v14M2 32h14M48 32h14' stroke='%23ff6a00' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0c10;
+  --bg-2:#10141b;
+  --bg-3:#171c26;
+  --line:rgba(255,255,255,.08);
+  --txt:#eef1f6;
+  --txt-2:#9aa3b2;
+  --accent:#ff6a00;
+  --accent-2:#ffb347;
+  --green:#22c55e;
+  --radius:16px;
+  --font-display:"Chakra Petch",system-ui,sans-serif;
+  --font-body:"Inter",system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:var(--font-body);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3,.btn,.nav-links a,.logo{font-family:var(--font-display)}
+::selection{background:var(--accent);color:#000}
+
+/* ---------- nav ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:14px 5vw;transition:background .3s,box-shadow .3s}
+.nav.scrolled{background:rgba(10,12,16,.92);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--line)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.05rem;letter-spacing:.12em;text-transform:uppercase}
+.logo svg{width:30px;height:30px;flex:none}
+.logo span em{color:var(--accent);font-style:normal}
+.nav-links{display:flex;align-items:center;gap:30px;list-style:none}
+.nav-links a{font-size:.85rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--txt-2);transition:color .2s}
+.nav-links a:hover{color:var(--txt)}
+.nav-cta{background:var(--accent);color:#000!important;padding:9px 18px;border-radius:8px;transition:transform .15s,box-shadow .2s}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(255,106,0,.35)}
+.burger{display:none;background:none;border:0;cursor:pointer;padding:6px}
+.burger span{display:block;width:24px;height:2px;background:var(--txt);margin:5px 0;transition:.25s}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:110px 5vw 60px;isolation:isolate}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:url("https://play-lh.googleusercontent.com/WsMGRlNp6VykrIgxyI5ExPy8ABzAVaaoZOJk67f5oT4LCo7Cj9HykURCmfsXzgHSVoPTPJSp7tIn3K4ynsyuCg=w2560") center/cover no-repeat}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(10,12,16,.82) 0%,rgba(10,12,16,.66) 45%,var(--bg) 100%)}
+.hero-inner{max-width:900px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,106,0,.45);color:var(--accent-2);background:rgba(255,106,0,.1);font-size:.78rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin-bottom:26px}
+.hero h1{font-size:clamp(2.4rem,6.5vw,4.6rem);font-weight:700;line-height:1.08;text-transform:uppercase;letter-spacing:.02em}
+.hero h1 .glow{color:var(--accent);text-shadow:0 0 34px rgba(255,106,0,.55)}
+.hero p{margin:22px auto 0;max-width:620px;color:#c3cad6;font-size:clamp(1rem,1.6vw,1.15rem)}
+.hero-actions{margin-top:38px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:10px;font-weight:700;font-size:.95rem;letter-spacing:.08em;text-transform:uppercase;transition:transform .15s,box-shadow .2s,background .2s;cursor:pointer}
+.btn-primary{background:linear-gradient(135deg,var(--accent),#ff8c2b);color:#000}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(255,106,0,.4)}
+.btn-ghost{border:1px solid rgba(255,255,255,.25);color:var(--txt)}
+.btn-ghost:hover{background:rgba(255,255,255,.08);transform:translateY(-2px)}
+.scroll-hint{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);color:var(--txt-2);font-size:1.4rem;animation:bob 2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translate(-50%,0)}50%{transform:translate(-50%,8px)}}
+
+/* ---------- stats ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-block:1px solid var(--line)}
+.stat{background:var(--bg-2);text-align:center;padding:42px 16px}
+.stat b{display:block;font-family:var(--font-display);font-size:clamp(1.7rem,3.4vw,2.6rem);font-weight:700;color:var(--accent)}
+.stat span{font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--txt-2)}
+
+/* ---------- sections ---------- */
+section{padding:100px 5vw}
+.section-head{max-width:1200px;margin:0 auto 56px}
+.kicker{color:var(--accent);font-family:var(--font-display);font-size:.82rem;font-weight:700;letter-spacing:.28em;text-transform:uppercase}
+.section-head h2{font-size:clamp(1.9rem,4vw,3rem);font-weight:700;text-transform:uppercase;margin-top:10px;line-height:1.15}
+.section-head p{color:var(--txt-2);max-width:640px;margin-top:14px}
+
+/* ---------- featured game ---------- */
+.featured{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:center}
+.featured-media{position:relative;border-radius:var(--radius);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+.featured-media img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .5s}
+.featured-media:hover img{transform:scale(1.04)}
+.featured-media .tag{position:absolute;top:16px;left:16px;background:var(--accent);color:#000;font-family:var(--font-display);font-weight:700;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;padding:6px 14px;border-radius:6px}
+.featured-info .game-title-row{display:flex;align-items:center;gap:18px;margin:18px 0 14px}
+.featured-info .icon{width:74px;height:74px;border-radius:20px;box-shadow:0 10px 26px rgba(0,0,0,.5)}
+.featured-info h3{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:700;line-height:1.2}
+.meta-row{display:flex;gap:18px;flex-wrap:wrap;color:var(--txt-2);font-size:.88rem;margin-bottom:18px}
+.meta-row .stars{color:var(--accent-2);letter-spacing:2px}
+.meta-row b{color:var(--txt)}
+.featured-info p{color:var(--txt-2)}
+.feature-list{list-style:none;margin:22px 0 30px;display:grid;gap:10px}
+.feature-list li{display:flex;gap:12px;align-items:flex-start;color:#c3cad6;font-size:.95rem}
+.feature-list li::before{content:"▸";color:var(--accent);font-weight:700;flex:none}
+
+/* ---------- game grid ---------- */
+#games{background:var(--bg-2)}
+.grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+.card{background:var(--bg-3);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-6px);border-color:rgba(255,106,0,.5);box-shadow:0 24px 60px rgba(0,0,0,.5)}
+.card-media{display:block;position:relative;overflow:hidden}
+.card-media img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:transform .5s}
+.card:hover .card-media img{transform:scale(1.06)}
+.card-body{padding:24px;display:flex;flex-direction:column;flex:1}
+.card-title{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.card-title img{width:54px;height:54px;border-radius:14px;flex:none}
+.card-title h3{font-size:1.08rem;font-weight:700;line-height:1.3}
+.card p.desc{color:var(--txt-2);font-size:.9rem;flex:1}
+.card .meta-row{margin:14px 0 18px;font-size:.82rem}
+.play-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);border-radius:10px;padding:12px;font-family:var(--font-display);font-weight:700;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;transition:background .2s,border-color .2s}
+.play-btn:hover{background:var(--accent);border-color:var(--accent);color:#000}
+.play-btn svg{width:18px;height:18px}
+
+/* ---------- screenshots marquee ---------- */
+.shots{padding:80px 0;background:var(--bg-2);border-top:1px solid var(--line);overflow:hidden}
+.shots .section-head{padding-inline:5vw}
+.marquee{display:flex;gap:18px;width:max-content;animation:slide 55s linear infinite}
+.marquee:hover{animation-play-state:paused}
+.marquee img{height:210px;border-radius:12px;border:1px solid var(--line)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+/* ---------- about ---------- */
+.about-wrap{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about-cards{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.about-card{background:var(--bg-3);border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.about-card .num{font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--accent)}
+.about-card p{color:var(--txt-2);font-size:.85rem;margin-top:4px}
+
+/* ---------- contact ---------- */
+.contact{background:linear-gradient(180deg,var(--bg-2),var(--bg));text-align:center}
+.contact-box{max-width:680px;margin:0 auto}
+.contact-box h2{font-size:clamp(1.8rem,3.6vw,2.6rem);text-transform:uppercase}
+.contact-box p{color:var(--txt-2);margin:16px 0 30px}
+
+/* ---------- footer ---------- */
+footer{border-top:1px solid var(--line);padding:44px 5vw;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;font-size:.85rem;color:var(--txt-2)}
+footer .logo{font-size:.9rem}
+footer nav{display:flex;gap:24px;flex-wrap:wrap}
+footer a:hover{color:var(--txt)}
+
+/* ---------- reveal animation ---------- */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.reveal.on{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:900px){
+  .featured,.about-wrap{grid-template-columns:1fr}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .nav-links{position:fixed;inset:0 0 auto 0;top:0;flex-direction:column;background:rgba(10,12,16,.98);padding:90px 5vw 40px;gap:22px;transform:translateY(-100%);transition:transform .3s;box-shadow:0 20px 40px rgba(0,0,0,.5)}
+  .nav-links.open{transform:none}
+  .burger{display:block;z-index:110}
+  .burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .burger.open span:nth-child(2){opacity:0}
+  .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .marquee img{height:150px}
+}
+</style>
 </head>
 <body>
 
-<!-- ===== NAV ===== -->
-<nav id="navbar">
-  <div class="container">
-    <div class="nav-inner">
-      <a href="#hero" class="nav-logo">BitCore Games</a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#games">Games</a></li>
-        <li><a href="#platforms">Platforms</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </div>
-    </div>
-  </div>
-  <div class="nav-mobile" id="navMobile">
-    <a href="#about"     onclick="closeMobile()">About</a>
-    <a href="#games"     onclick="closeMobile()">Games</a>
-    <a href="#platforms" onclick="closeMobile()">Platforms</a>
-    <a href="#contact"   onclick="closeMobile()">Contact</a>
-  </div>
-</nav>
+<header class="nav" id="nav">
+  <a class="logo" href="#top" aria-label="Fun Shooting Games home">
+    <svg viewBox="0 0 64 64" fill="none"><circle cx="32" cy="32" r="26" stroke="#ff6a00" stroke-width="5"/><circle cx="32" cy="32" r="7" fill="#ff6a00"/><path d="M32 2v14M32 48v14M2 32h14M48 32h14" stroke="#ff6a00" stroke-width="5"/></svg>
+    <span>Fun Shooting <em>Games</em></span>
+  </a>
+  <button type="button" class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#games">Games</a></li>
+    <li><a href="#screens">Screens</a></li>
+    <li><a href="#about">Studio</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a class="nav-cta" href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener">Google Play</a></li>
+  </ul>
+</header>
 
-<!-- ===== HERO ===== -->
-<section id="hero">
-  <div class="hero-glow hero-glow-1"></div>
-  <div class="hero-glow hero-glow-2"></div>
-  <div class="container">
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="padding-top:0">
     <div class="hero-inner">
-      <div class="hero-content">
-        <span class="badge-tag">&#127918; Mobile Gaming Studio</span>
-        <h1 class="hero-title font-game">
-          <span class="gradient-text">We Build Games</span><br />
-          That Players Love
-        </h1>
-        <p class="hero-desc">
-          From Hunting Simulators to Robot Fighting &#8212; BitCore Games delivers
-          thrilling mobile experiences to millions of players worldwide.
-        </p>
-        <div class="hero-btns">
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767"
-             target="_blank" rel="noopener" class="btn btn-primary">&#127918; Play Our Games</a>
-          <a href="#about" class="btn btn-outline">Learn More</a>
-        </div>
-      </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="hero-float-ring"></div>
-        <div class="hero-center-icon">&#127918;</div>
-        <div class="hero-orbit-card">&#128301; Hunting Sniper</div>
-        <div class="hero-orbit-card">&#129416; Shark Hunter</div>
-        <div class="hero-orbit-card">&#129302; Iron Kill</div>
-        <div class="hero-orbit-card">&#127993; Archery Master</div>
+      <span class="hero-badge">◉ 170,000,000+ downloads worldwide</span>
+      <h1>Lock. Load.<br><span class="glow">Dominate</span> the battlefield.</h1>
+      <p>We craft fast, fierce and free mobile FPS experiences — from counter-terror strikes to zombie apocalypse survival. Millions of players. One trigger finger away.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#games">⌖ Explore Our Games</a>
+        <a class="btn btn-ghost" href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener">Get on Google Play</a>
       </div>
     </div>
-  </div>
-  <div class="hero-scroll">
-    <span>Scroll</span>
-    <svg width="16" height="20" viewBox="0 0 16 20" fill="none" aria-hidden="true">
-      <path d="M8 0v16M1 9l7 7 7-7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </div>
-</section>
+    <a class="scroll-hint" href="#stats" aria-label="Scroll down">▼</a>
+  </section>
 
-<!-- ===== STATS ===== -->
-<section id="stats">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-number" data-target="14" data-suffix="+">0</div>
-        <div class="stat-label">Games Published</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number" data-target="5" data-suffix="M+">0</div>
-        <div class="stat-label">Downloads</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number" data-target="4.2" data-suffix="&#9733;" data-float="true">0</div>
-        <div class="stat-label">Average Rating</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number" data-target="3" data-suffix="">0</div>
-        <div class="stat-label">Global Studios</div>
-      </div>
+  <!-- STATS -->
+  <div class="stats" id="stats">
+    <div class="stat reveal"><b data-count="170" data-suffix="M+">0</b><span>Total Downloads</span></div>
+    <div class="stat reveal"><b data-count="4" data-suffix="">0</b><span>Live Titles</span></div>
+    <div class="stat reveal"><b data-count="380" data-suffix="K+">0</b><span>Player Reviews</span></div>
+    <div class="stat reveal"><b data-count="150" data-suffix="+">0</b><span>Countries Reached</span></div>
+  </div>
+
+  <!-- FEATURED -->
+  <section id="featured">
+    <div class="section-head reveal">
+      <span class="kicker">// Flagship Title</span>
+      <h2>Gun Strike: FPS Shooting Games</h2>
     </div>
-  </div>
-</section>
-
-<!-- ===== GAMES ===== -->
-<section id="games">
-  <div class="container">
-    <div class="games-header">
-      <span class="badge-tag">&#128377; Portfolio</span>
-      <h2 class="section-title gradient-text">Our Game Portfolio</h2>
-      <p class="section-sub">14 titles across Action, Simulation, Racing, Fighting and more</p>
-    </div>
-    <div class="filter-tabs" role="tablist">
-      <button class="filter-btn active" data-filter="all"       role="tab">All</button>
-      <button class="filter-btn"        data-filter="hunting"   role="tab">Hunting</button>
-      <button class="filter-btn"        data-filter="archery"   role="tab">Archery</button>
-      <button class="filter-btn"        data-filter="racing"    role="tab">Racing</button>
-      <button class="filter-btn"        data-filter="fighting"  role="tab">Fighting</button>
-      <button class="filter-btn"        data-filter="simulator" role="tab">Simulator</button>
-    </div>
-    <div class="games-grid" id="gamesGrid">
-
-      <!-- Hunting -->
-      <article class="game-card" data-category="hunting">
-        <div class="game-cover cover-hunting">&#128301;</div>
-        <div class="game-body">
-          <span class="game-cat-tag tag-hunting">Hunting</span>
-          <h3 class="game-name">Hunting Sniper</h3>
-          <p class="game-desc">Sniper hunting simulator &#8212; track and take down wildlife targets in stunning jungle environments.</p>
-          <div class="game-rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color:var(--muted);font-size:.8rem">4.2</span></div>
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn-play">&#127918; Play on Google Play</a>
-        </div>
-      </article>
-
-      <article class="game-card" data-category="hunting">
-        <div class="game-cover cover-hunting">&#129416;</div>
-        <div class="game-body">
-          <span class="game-cat-tag tag-hunting">Hunting</span>
-          <h3 class="game-name">Shark Hunter &amp; Shark Hunting</h3>
-          <p class="game-desc">Dive deep and hunt deadly sharks in thrilling underwater action sequences.</p>
-          <div class="game-rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color:var(--muted);font-size:.8rem">4.1</span></div>
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn-play">&#127918; Play on Google Play</a>
-        </div>
-      </article>
-
-      <article class="game-card" data-category="hunting">
-        <div class="game-cover cover-hunting">&#128058;</div>
-        <div class="game-body">
-          <span class="game-cat-tag tag-hunting">Hunting</span>
-          <h3 class="game-name">Wild Hunter 3D</h3>
-          <p class="game-desc">Explore open 3D wilderness and hunt a variety of wild animals with precision rifles.</p>
-          <div class="game-rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color:var(--muted);font-size:.8rem">4.0</span></div>
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn-play">&#127918; Play on Google Play</a>
-        </div>
-      </article>
-
-      <article class="game-card" data-category="hunting">
-        <div class="game-cover cover-hunting">&#129503;</div>
-        <div class="game-body">
-          <span class="game-cat-tag tag-hunting">Hunting</span>
-          <h3 class="game-name">Zombie Hunt</h3>
-          <p class="game-desc">Survive the apocalypse &#8212; hunt hordes of zombies and protect the last survivors.</p>
-          <div class="game-rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color:var(--muted);font-size:.8rem">4.2</span></div>
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn-play">&#127918; Play on Google Play</a>
-        </div>
-      </article>
-
-      <article class="game-card" data-category="hunting">
-        <div class="game-cover cover-hunting">&#127956;</div>
-        <div class="game-body">
-          <span class="game-cat-tag tag-hunting">Hunting</span>
-          <h3 class="game-name">Mountain Sniper Shooting 3D</h3>
-          <p class="game-desc">Take long-range shots across mountain terrains in intense 3D sniper missions.</p>
-          <div class="game-rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color:var(--muted);font-size:.8rem">4.3</span></div>
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn-play">&#127918; Play on Google Play</a>
-        </div>
-      </article>
-
-      <!-- Archery -->
-      <article class="game-card" data-category="archery">
-        <div class="game-cover cover-archery">&#127993;</div>
-        <div class="game-body">
-          <span class="game-cat-tag tag-archery">Archery</span>
-          <h3 class="game-name">Archery Games</h3>
-          <p class="game-desc">Compete in precision archery challenges &#8212; aim true and climb the global leaderboard.</p>
-          <div class="game-rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color:var(--muted);font-size:.8rem">4.1</span></div>
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn-play">&#127918; Play on Google Play</a>
-        </div>
-      </article>
-
-      <article class="game-card" data-category="archery">
-        <div class="game-cover cover-archery">&#127919;</div>
-        <div class="game-body">
-          <span class="game-cat-tag tag-archery">Archery</span>
-          <h3 class="game-name">Archery Master 3D</h3>
-          <p class="game-desc">Tournament archery action &#8212; face off against champions in stunning 3D arenas.</p>
-          <div class="game-rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span style="color:var(--muted);font-size:.8rem">4.5</span></div>
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn-play">&#127918; Play on Google Play</a>
-        </div>
-      </article>
-
-      <!-- Racing -->
-      <article class="game-card" data-category="racing">
-        <div class="game-cover cover-racing">&#127950;</div>
-        <div class="game-body">
-          <span class="game-cat-tag tag-racing">Racing</span>
-          <h3 class="game-name">Car Racing Games</h3>
-          <p class="game-desc">High-speed racing action &#8212; unlock exotic cars and dominate every circuit.</p>
-          <div class="game-rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color:var(--muted);font-size:.8rem">4.0</span></div>
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn-play">&#127918; Play on Google Play</a>
-        </div>
-      </article>
-
-      <article class="game-card" data-category="racing">
-        <div class="game-cover cover-racing">&#128663;</div>
-        <div class="game-body">
-          <span class="game-cat-tag tag-racing">Racing</span>
-          <h3 class="game-name">Real Driving Simulator</h3>
-          <p class="game-desc">Realistic open-world driving &#8212; cruise through cities or test your parking skills.</p>
-          <div class="game-rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color:var(--muted);font-size:.8rem">4.2</span></div>
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn-play">&#127918; Play on Google Play</a>
-        </div>
-      </article>
-
-      <article class="game-card" data-category="racing">
-        <div class="game-cover cover-racing">&#128642;</div>
-        <div class="game-body">
-          <span class="game-cat-tag tag-racing">Racing</span>
-          <h3 class="game-name">Train Simulator</h3>
-          <p class="game-desc">Take control of powerful locomotives and navigate complex rail networks worldwide.</p>
-          <div class="game-rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color:var(--muted);font-size:.8rem">4.1</span></div>
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn-play">&#127918; Play on Google Play</a>
-        </div>
-      </article>
-
-      <!-- Fighting -->
-      <article class="game-card" data-category="fighting">
-        <div class="game-cover cover-fighting">&#129302;</div>
-        <div class="game-body">
-          <span class="game-cat-tag tag-fighting">Fighting</span>
-          <h3 class="game-name">Iron Kill: Robot Fighting</h3>
-          <p class="game-desc">Build and battle steel warriors in electrifying robot combat tournaments.</p>
-          <div class="game-rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span style="color:var(--muted);font-size:.8rem">4.4</span></div>
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn-play">&#127918; Play on Google Play</a>
-        </div>
-      </article>
-
-      <article class="game-card" data-category="fighting">
-        <div class="game-cover cover-fighting">&#129354;</div>
-        <div class="game-body">
-          <span class="game-cat-tag tag-fighting">Fighting</span>
-          <h3 class="game-name">Boxing Fighting Game 3D</h3>
-          <p class="game-desc">Step into the ring and knock out opponents in fast-paced 3D boxing brawls.</p>
-          <div class="game-rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color:var(--muted);font-size:.8rem">4.0</span></div>
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn-play">&#127918; Play on Google Play</a>
-        </div>
-      </article>
-
-      <!-- Simulator -->
-      <article class="game-card" data-category="simulator">
-        <div class="game-cover cover-simulator">&#128021;</div>
-        <div class="game-body">
-          <span class="game-cat-tag tag-simulator">Simulator</span>
-          <h3 class="game-name">Dog Simulator 3D</h3>
-          <p class="game-desc">Live life as a dog &#8212; explore vibrant neighborhoods, play fetch and make friends.</p>
-          <div class="game-rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color:var(--muted);font-size:.8rem">4.3</span></div>
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn-play">&#127918; Play on Google Play</a>
-        </div>
-      </article>
-
-      <article class="game-card" data-category="simulator">
-        <div class="game-cover cover-simulator">&#129416;</div>
-        <div class="game-body">
-          <span class="game-cat-tag tag-simulator">Simulator</span>
-          <h3 class="game-name">Shark Simulator 3D</h3>
-          <p class="game-desc">Become the ocean&#39;s apex predator &#8212; rule the seas and terrorize the deep in 3D.</p>
-          <div class="game-rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span style="color:var(--muted);font-size:.8rem">4.2</span></div>
-          <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn-play">&#127918; Play on Google Play</a>
-        </div>
-      </article>
-
-    </div><!-- /games-grid -->
-  </div>
-</section>
-
-<!-- ===== SHOWCASE ===== -->
-<section id="showcase" aria-label="Game showcase banners">
-  <div class="showcase-banner" style="background-image:url('images/lg-about-banner.jpg')">
-    <div class="container">
-      <div class="showcase-content">
-        <h2 class="font-game">Built for Mobile Gamers</h2>
-        <p>Every title is crafted with touch-first controls and optimized for the best mobile experience on any device.</p>
-      </div>
-    </div>
-  </div>
-  <div class="showcase-banner" style="background-image:url('images/lg-what-we-do-banner.jpg')">
-    <div class="container">
-      <div class="showcase-content">
-        <h2 class="font-game">What We Do</h2>
-        <p>We design, develop and publish mobile games that are simple to pick up, deeply satisfying to master, and impossible to put down.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== ABOUT ===== -->
-<section id="about">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-text">
-        <span class="badge-tag">&#128126; Our Story</span>
-        <h2 class="gradient-text">About BitCore Games</h2>
-        <p>Our small team spans India, China and Seychelles, backed by talented freelancers from around the world. Together we create mobile games that reach millions of players across the globe.</p>
-        <p>We specialize in mobile gaming across Action, Simulation, Sports and Adventure genres. Our focus is always on delivering simple, fun, and addictive gameplay experiences &#8212; titles anyone can pick up and love instantly.</p>
-        <p>Since our founding, we have published <strong>14+ games</strong>, accumulating over 5&nbsp;million downloads and a community of passionate players worldwide.</p>
-        <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener" class="btn btn-primary" style="margin-top:1.5rem">View All Games</a>
-      </div>
-      <div class="about-cards">
-        <div class="about-feature glass-card">
-          <div class="about-icon">&#127919;</div>
-          <div>
-            <h4>Precision Gameplay</h4>
-            <p>Touch-optimized controls designed specifically for mobile, making every action feel natural and responsive.</p>
-          </div>
-        </div>
-        <div class="about-feature glass-card">
-          <div class="about-icon">&#127758;</div>
-          <div>
-            <h4>Global Reach</h4>
-            <p>Players in 150+ countries enjoy our games &#8212; our titles are available in multiple languages worldwide.</p>
-          </div>
-        </div>
-        <div class="about-feature glass-card">
-          <div class="about-icon">&#128260;</div>
-          <div>
-            <h4>Regular Updates</h4>
-            <p>We continuously improve our games based on player feedback, rolling out new content and features regularly.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PLATFORMS ===== -->
-<section id="platforms">
-  <div class="phone-mockup" aria-hidden="true">&#128241;</div>
-  <div class="container" style="position:relative;z-index:1">
-    <span class="badge-tag" style="display:block;text-align:center;margin:0 auto 1rem">&#128242; Download Now</span>
-    <h2 class="section-title"><span class="gradient-text">Available On</span></h2>
-    <p class="section-sub">Get our games for free on your favourite platform</p>
-    <div class="platform-buttons">
-      <a href="https://play.google.com/store/apps/dev?id=4745641900732694767"
-         target="_blank" rel="noopener" class="platform-btn" aria-label="Get it on Google Play">
-        <img src="google_play.png" alt="Get it on Google Play" />
+    <div class="featured">
+      <a class="featured-media reveal" href="https://play.google.com/store/apps/details?id=com.devgame66.csshot" target="_blank" rel="noopener">
+        <img src="https://play-lh.googleusercontent.com/Xoxil07TnKUrsY-gJlvBliByBWe-hP0e7jvVrY_c_h_kDakCMfKkx75JIus24Ml9abeEktB26mUSUxhUtcwS=w1280-h720" alt="Gun Strike gameplay screenshot" loading="lazy">
+        <span class="tag">100M+ Downloads</span>
       </a>
-      <div class="platform-btn disabled" aria-label="App Store Coming Soon">
-        <img src="app_store.png" alt="Download on the App Store" />
-        <span class="coming-soon">Coming Soon</span>
+      <div class="featured-info reveal">
+        <div class="game-title-row">
+          <a href="https://play.google.com/store/apps/details?id=com.devgame66.csshot" target="_blank" rel="noopener" aria-label="Get Gun Strike on Google Play"><img class="icon" src="https://play-lh.googleusercontent.com/qedpyT9UaYsk8xUUWRal-ro4zCLX4tZKIiXlQQqZul9Yp0k7ote0J---jMmmTHZmeJdwF4-Q8eI3rz6kGTNL0hM=w148" alt="Gun Strike icon"></a>
+          <h3>The #1 counter-terror gunfight on mobile</h3>
+        </div>
+        <div class="meta-row"><span class="stars">★★★★☆</span><span><b>3.6</b> · 171K reviews</span><span><b>100M+</b> downloads</span></div>
+        <p>Step into the boots of an elite special-forces shooter. High-intensity offline missions, realistic ballistics and an arsenal built for one thing — victory.</p>
+        <ul class="feature-list">
+          <li>Intuitive controls with realistic ballistics and recoil</li>
+          <li>High-intensity offline missions — play anywhere, anytime</li>
+          <li>Massive arsenal: rifles, snipers, shotguns and more</li>
+          <li>Optimized to run smoothly even on low-end devices</li>
+        </ul>
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.devgame66.csshot" target="_blank" rel="noopener">▶ Play Free Now</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== FOOTER / CONTACT ===== -->
-<footer id="contact">
-  <div class="container">
-    <div class="contact-inner">
-      <div class="contact-brand">
-        <span class="nav-logo">BitCore Games</span>
-        <p>A global mobile gaming studio with teams in India, China and Seychelles, creating action-packed games loved by millions of players worldwide.</p>
-      </div>
-      <div class="contact-info">
-        <h4>Get in Touch</h4>
-        <div class="contact-email">
-          <a href="mailto:andy@bitcore-games.com">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            andy@bitcore-games.com
+  <!-- GAMES GRID -->
+  <section id="games">
+    <div class="section-head reveal">
+      <span class="kicker">// Arsenal</span>
+      <h2>Our Games</h2>
+      <p>Four battle-tested titles. Zero cost to play. Pick your warzone and drop in.</p>
+    </div>
+    <div class="grid">
+
+      <article class="card reveal">
+        <a class="card-media" href="https://play.google.com/store/apps/details?id=com.devgame66.csshot" target="_blank" rel="noopener" aria-label="Get Gun Strike on Google Play"><img src="https://play-lh.googleusercontent.com/gtRWcemjTb4vyOfRPTwYXRMfqQfV2GQG2ey8VbaKFWVi2MO5il2Lf9nt-NVCYgIlXpvaD4MuRNHt1xmbUKyQpA=w1280-h720" alt="Gun Strike screenshot" loading="lazy"></a>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://play.google.com/store/apps/details?id=com.devgame66.csshot" target="_blank" rel="noopener" aria-label="Get Gun Strike on Google Play"><img src="https://play-lh.googleusercontent.com/qedpyT9UaYsk8xUUWRal-ro4zCLX4tZKIiXlQQqZul9Yp0k7ote0J---jMmmTHZmeJdwF4-Q8eI3rz6kGTNL0hM=w108" alt="Gun Strike icon" loading="lazy"></a>
+            <h3>Gun Strike: FPS Shooting Games</h3>
+          </div>
+          <p class="desc">The definitive free-to-play counter-terrorism shooter. Unleash the ultimate gunfight across high-intensity offline missions and prove you're the ultimate shooter.</p>
+          <div class="meta-row"><span class="stars">★★★★☆</span><span><b>3.6</b></span><span><b>100M+</b> downloads</span></div>
+          <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.devgame66.csshot" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 1.8 14.9 12 3.6 22.2c-.4-.3-.6-.8-.6-1.4V3.2c0-.6.2-1.1.6-1.4Zm12.7 8.9 2.7-2.4 -12-6.8c-.3-.2-.6-.3-1-.3l10.3 9.5Zm0 2.6L6 22.8c.4 0 .7-.1 1-.3l12-6.8-2.7-2.4Zm4.9-1.9-2.9-1.7-3 2.3 3 2.3 2.9-1.7c.9-.5.9-1.7 0-2.2Z"/></svg>
+            Google Play
           </a>
         </div>
-        <div class="social-links" aria-label="Social media links">
-          <a href="#" class="social-link" aria-label="Facebook">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-          </a>
-          <a href="#" class="social-link" aria-label="Twitter">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
-          </a>
-          <a href="#" class="social-link" aria-label="YouTube">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#08090f"/></svg>
+      </article>
+
+      <article class="card reveal">
+        <a class="card-media" href="https://play.google.com/store/apps/details?id=com.freeshooting.specialforces.war3d" target="_blank" rel="noopener" aria-label="Get Special Ops on Google Play"><img src="https://play-lh.googleusercontent.com/QIxzuHIFx8w8i1snRBGCZRufynQjxKJeCr2Ky5sWkVKD1rnwQKf6USgkBHHfriruwgTfmSXDWOUU10o8FYVY=w1280-h720" alt="Special Ops screenshot" loading="lazy"></a>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://play.google.com/store/apps/details?id=com.freeshooting.specialforces.war3d" target="_blank" rel="noopener" aria-label="Get Special Ops on Google Play"><img src="https://play-lh.googleusercontent.com/FMxtE7-XXuxBRwRJyaHXK_WGQtUsouiufbU8YofF1riq5W3hfZktgWau0A8_H3jfvisGbAyh3OfaOOmeIu0i=w108" alt="Special Ops icon" loading="lazy"></a>
+            <h3>Special Ops: PvP Sniper Shooter</h3>
+          </div>
+          <p class="desc">The most skill-based mobile FPS. Squad up in real-time PvP matches across prisons, storage yards and small towns — then fight your way to the top of the leaderboard.</p>
+          <div class="meta-row"><span class="stars">★★★★☆</span><span><b>3.5</b></span><span><b>50M+</b> downloads</span></div>
+          <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.freeshooting.specialforces.war3d" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 1.8 14.9 12 3.6 22.2c-.4-.3-.6-.8-.6-1.4V3.2c0-.6.2-1.1.6-1.4Zm12.7 8.9 2.7-2.4 -12-6.8c-.3-.2-.6-.3-1-.3l10.3 9.5Zm0 2.6L6 22.8c.4 0 .7-.1 1-.3l12-6.8-2.7-2.4Zm4.9-1.9-2.9-1.7-3 2.3 3 2.3 2.9-1.7c.9-.5.9-1.7 0-2.2Z"/></svg>
+            Google Play
           </a>
         </div>
+      </article>
+
+      <article class="card reveal">
+        <a class="card-media" href="https://play.google.com/store/apps/details?id=com.zombieshooting.survivalhunter.gun3d" target="_blank" rel="noopener" aria-label="Get Zombie 3D Gun Trigger on Google Play"><img src="https://play-lh.googleusercontent.com/Jyk6hCl43398jrXcgOquWFe0HFSjM7LSEt9z70YrDKBf5cl98pxXcWdijh3-A9vJKhYPuRVVBfs1HedS8XdpXGU=w1280-h720" alt="Zombie 3D Gun Trigger screenshot" loading="lazy"></a>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://play.google.com/store/apps/details?id=com.zombieshooting.survivalhunter.gun3d" target="_blank" rel="noopener" aria-label="Get Zombie 3D Gun Trigger on Google Play"><img src="https://play-lh.googleusercontent.com/7zMJMjfkTHvf4wJpf9j1b1dOklMbDB5X9HDVY8S1PzAoH_12YshFW3jxNtiDp5AyS8wXG1pFpVvZLmQ2g6fn=w108" alt="Zombie 3D Gun Trigger icon" loading="lazy"></a>
+            <h3>Zombie 3D Gun Trigger: PvP</h3>
+          </div>
+          <p class="desc">The contagion is spreading. Grab an insane arsenal of combat weapons and battle the walking dead across terrifying environments — humanity's last chance is you.</p>
+          <div class="meta-row"><span class="stars">★★★★☆</span><span><b>3.6</b></span><span><b>10M+</b> downloads</span></div>
+          <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.zombieshooting.survivalhunter.gun3d" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 1.8 14.9 12 3.6 22.2c-.4-.3-.6-.8-.6-1.4V3.2c0-.6.2-1.1.6-1.4Zm12.7 8.9 2.7-2.4 -12-6.8c-.3-.2-.6-.3-1-.3l10.3 9.5Zm0 2.6L6 22.8c.4 0 .7-.1 1-.3l12-6.8-2.7-2.4Zm4.9-1.9-2.9-1.7-3 2.3 3 2.3 2.9-1.7c.9-.5.9-1.7 0-2.2Z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </article>
+
+      <article class="card reveal">
+        <a class="card-media" href="https://play.google.com/store/apps/details?id=com.shootinggames.sniper3d.assassin" target="_blank" rel="noopener" aria-label="Get Sniper 3D on Google Play"><img src="https://play-lh.googleusercontent.com/8Zg0GdRrxSey2_wGGyZiw8Y7lXp5FEVfKJtD_BigGWuqZkGiLTvIIGvYVWryTUxz1u_6w1BqApuKmlnPeNVf4Q=w1280-h720" alt="Sniper 3D screenshot" loading="lazy"></a>
+        <div class="card-body">
+          <div class="card-title">
+            <a href="https://play.google.com/store/apps/details?id=com.shootinggames.sniper3d.assassin" target="_blank" rel="noopener" aria-label="Get Sniper 3D on Google Play"><img src="https://play-lh.googleusercontent.com/SsVA4-bNwqOXycvTrhFEhyzvj5UGQ5sHba4pMkmtuWTOXbHWjjQWrlyn_O13iXzUNna5MJvq5GIV1YEVwPab=w108" alt="Sniper 3D icon" loading="lazy"></a>
+            <h3>Sniper 3D Gun Shooter: Offline</h3>
+          </div>
+          <p class="desc">One shot, one kill. Take down targets across multiple battlegrounds in timed missions, unlock and upgrade elite rifles — fully offline, playable anywhere.</p>
+          <div class="meta-row"><span class="stars">★★★★☆</span><span><b>4.0</b></span><span><b>10M+</b> downloads</span></div>
+          <a class="play-btn" href="https://play.google.com/store/apps/details?id=com.shootinggames.sniper3d.assassin" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 1.8 14.9 12 3.6 22.2c-.4-.3-.6-.8-.6-1.4V3.2c0-.6.2-1.1.6-1.4Zm12.7 8.9 2.7-2.4 -12-6.8c-.3-.2-.6-.3-1-.3l10.3 9.5Zm0 2.6L6 22.8c.4 0 .7-.1 1-.3l12-6.8-2.7-2.4Zm4.9-1.9-2.9-1.7-3 2.3 3 2.3 2.9-1.7c.9-.5.9-1.7 0-2.2Z"/></svg>
+            Google Play
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- SCREENSHOT MARQUEE -->
+  <section class="shots" id="screens" style="padding-inline:0">
+    <div class="section-head reveal">
+      <span class="kicker">// In-Game</span>
+      <h2>Straight from the Battlefield</h2>
+    </div>
+    <div class="marquee" id="marquee">
+      <img src="https://play-lh.googleusercontent.com/CC9k46s3dR_98FkLOcoI1U0wjYedAVfxA1GU98yDccmHGg1sMTE3waeqFFU1h_MbQS2WFn6PZqbLvrYlVA4S=w800-h450" alt="Gun Strike gameplay" loading="lazy">
+      <img src="https://play-lh.googleusercontent.com/DvUB4d3Ij9b7PrXoUU3rwOcSXwOYP7S59IER1sLd6YVpKwhqxtTqy639H32ofCoQ1TjBauTKbNBdVDrOd3WI7g=w800-h450" alt="Special Ops gameplay" loading="lazy">
+      <img src="https://play-lh.googleusercontent.com/aFgQvS3HvgUtsVXe33YqIIgWMQpYIJEP8-RsGpIndQ4zeW3Bzq1BgDGt8kLy2Na1GNgbVZGoCb_TqEjcZb7_OQo=w800-h450" alt="Zombie 3D gameplay" loading="lazy">
+      <img src="https://play-lh.googleusercontent.com/Gk0spsFpXIQGJmVM4AxySQLEXiDRpd0NdgpHMzSmMRDnLXcHWpOuxNXZ6O7x252_KDJxmEaGaUWregWp7OMr-A=w800-h450" alt="Sniper 3D gameplay" loading="lazy">
+      <img src="https://play-lh.googleusercontent.com/ebqyo_fzlSFqj79_SV-NlSa55RZPQ6HPNwpT48mBsuP1fUfJc8ce16O9jaID0MVkKygXgFhzImeK0r0tC2T8Cw=w800-h450" alt="Gun Strike gameplay" loading="lazy">
+      <img src="https://play-lh.googleusercontent.com/7a5dGVZM2HS_U061QrBfOYeheXwP8x5tlNVbz6xf7S4eJN46VCQ35yDhQ1PnJvzYeCCppbNVyYLZqI3AzmXTyQ=w800-h450" alt="Special Ops gameplay" loading="lazy">
+      <img src="https://play-lh.googleusercontent.com/_BfvLupL61a4-FNaIvo8NjWBHSMBw-v7fflSnCLOQJJHJb-OQ3gJqcxhwARf8zrG-DxzrKSkqKdtHM6dFxa4z8M=w800-h450" alt="Zombie 3D gameplay" loading="lazy">
+      <img src="https://play-lh.googleusercontent.com/lDAi4TvISLzgBFelFQcG8GO5fB7FjGSUWPw-zHRucD3u_flrsuyP602hA0W8C3R2QNnieYCI32whaX0Dn1Z1=w800-h450" alt="Sniper 3D gameplay" loading="lazy">
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-wrap">
+      <div class="reveal">
+        <span class="kicker">// The Studio</span>
+        <h2 style="font-size:clamp(1.8rem,3.6vw,2.8rem);text-transform:uppercase;margin-top:10px">Built for the love of the shot</h2>
+        <p style="color:var(--txt-2);margin-top:18px">Fun Shooting Games is an independent mobile studio focused on one genre we know inside out: the first-person shooter. We obsess over gunfeel, buttery-smooth controls and performance that holds up on any device — so the next perfect headshot is always within reach, online or offline.</p>
+        <p style="color:var(--txt-2);margin-top:14px">Every title we ship is free to play, tuned for low-end hardware, and updated with our players' feedback at the center.</p>
+      </div>
+      <div class="about-cards reveal">
+        <div class="about-card"><div class="num">100M+</div><p>Downloads on our flagship title Gun Strike alone</p></div>
+        <div class="about-card"><div class="num">FPS</div><p>One genre, mastered — from sniping to zombie survival</p></div>
+        <div class="about-card"><div class="num">60fps</div><p>Optimized gunplay, even on entry-level phones</p></div>
+        <div class="about-card"><div class="num">Free</div><p>Every game free to download and play, worldwide</p></div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p class="footer-copyright">&copy; BitCore Technology Co., Ltd. All Rights Reserved.</p>
-      <nav class="footer-links" aria-label="Footer links">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Press &amp; Media</a>
-      </nav>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="contact-box reveal">
+      <span class="kicker">// Comms Channel</span>
+      <h2>Get in touch</h2>
+      <p>Feedback, bug reports, business or partnership inquiries — our squad reads everything. Drop us a line and we'll get back to you.</p>
+      <a class="btn btn-primary" href="mailto:devgame66@gmail.com">✉ devgame66@gmail.com</a>
     </div>
-  </div>
+  </section>
+
+</main>
+
+<footer>
+  <a class="logo" href="#top">
+    <svg viewBox="0 0 64 64" fill="none" style="width:22px;height:22px"><circle cx="32" cy="32" r="26" stroke="#ff6a00" stroke-width="5"/><circle cx="32" cy="32" r="7" fill="#ff6a00"/><path d="M32 2v14M32 48v14M2 32h14M48 32h14" stroke="#ff6a00" stroke-width="5"/></svg>
+    <span>Fun Shooting <em>Games</em></span>
+  </a>
+  <nav>
+    <a href="#games">Games</a>
+    <a href="#about">Studio</a>
+    <a href="https://play.google.com/store/apps/dev?id=4745641900732694767" target="_blank" rel="noopener">Google Play</a>
+    <a href="app-ads.txt">app-ads.txt</a>
+    <a href="mailto:devgame66@gmail.com">Contact</a>
+  </nav>
+  <span id="year"></span>
 </footer>
 
-<!-- ===== SCRIPTS ===== -->
-<script src="js/jquery-1.11.1.min.js"></script>
-<script src="js/core.js"></script>
 <script>
-(function () {
-  'use strict';
+// sticky nav
+const nav = document.getElementById('nav');
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 20), {passive:true});
 
-  /* Nav scroll */
-  var navbar = document.getElementById('navbar');
-  window.addEventListener('scroll', function () {
-    navbar.classList.toggle('scrolled', window.scrollY > 60);
-  }, { passive: true });
+// mobile menu
+const burger = document.getElementById('burger'), links = document.getElementById('navLinks');
+burger.addEventListener('click', () => {
+  const open = links.classList.toggle('open');
+  burger.classList.toggle('open', open);
+  burger.setAttribute('aria-expanded', open);
+});
+links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  links.classList.remove('open'); burger.classList.remove('open');
+}));
 
-  /* Hamburger */
-  var hamburger = document.getElementById('hamburger');
-  var navMobile = document.getElementById('navMobile');
-  function closeMobile() {
-    hamburger.classList.remove('open');
-    navMobile.classList.remove('open');
-    hamburger.setAttribute('aria-expanded', 'false');
-  }
-  window.closeMobile = closeMobile;
-  hamburger.addEventListener('click', function () {
-    var open = navMobile.classList.toggle('open');
-    hamburger.classList.toggle('open');
-    hamburger.setAttribute('aria-expanded', String(open));
-  });
+// reveal on scroll
+const io = new IntersectionObserver(entries => entries.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('on'); io.unobserve(e.target); }
+}), {threshold:.15});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  /* Game filter tabs */
-  var filterBtns = document.querySelectorAll('.filter-btn');
-  var gameCards  = document.querySelectorAll('.game-card');
-  filterBtns.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      filterBtns.forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      var f = btn.getAttribute('data-filter');
-      gameCards.forEach(function (card) {
-        card.style.display = (f === 'all' || card.getAttribute('data-category') === f) ? 'flex' : 'none';
-      });
-    });
-  });
+// animated counters
+const cio = new IntersectionObserver(entries => entries.forEach(e => {
+  if (!e.isIntersecting) return;
+  const el = e.target, target = +el.dataset.count, suffix = el.dataset.suffix || '';
+  const t0 = performance.now(), dur = 1600;
+  (function tick(t){
+    const p = Math.min((t - t0) / dur, 1), ease = 1 - Math.pow(1 - p, 3);
+    el.textContent = Math.round(target * ease) + suffix;
+    if (p < 1) requestAnimationFrame(tick);
+  })(t0);
+  cio.unobserve(el);
+}), {threshold:.6});
+document.querySelectorAll('[data-count]').forEach(el => cio.observe(el));
 
-  /* Stats count-up */
-  var statEls = document.querySelectorAll('.stat-number[data-target]');
-  var counted = false;
-  var observer = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting || counted) return;
-      counted = true;
-      statEls.forEach(function (el) {
-        var target  = parseFloat(el.getAttribute('data-target'));
-        var suffix  = el.getAttribute('data-suffix') || '';
-        var isFloat = el.getAttribute('data-float') === 'true';
-        var start   = null;
-        var dur     = 1800;
-        function step(ts) {
-          if (!start) start = ts;
-          var p = Math.min((ts - start) / dur, 1);
-          var e = 1 - Math.pow(1 - p, 3);
-          var v = target * e;
-          el.textContent = (isFloat ? v.toFixed(1) : Math.floor(v)) + suffix;
-          if (p < 1) requestAnimationFrame(step);
-          else el.textContent = (isFloat ? target.toFixed(1) : target) + suffix;
-        }
-        requestAnimationFrame(step);
-      });
-      observer.disconnect();
-    });
-  }, { threshold: 0.5 });
-  if (statEls.length) observer.observe(statEls[0]);
+// duplicate marquee content for seamless loop
+const mq = document.getElementById('marquee');
+mq.innerHTML += mq.innerHTML;
 
-})();
+// footer year
+document.getElementById('year').textContent = '© ' + new Date().getFullYear() + ' Fun Shooting Games. All rights reserved.';
 </script>
 </body>
 </html>
