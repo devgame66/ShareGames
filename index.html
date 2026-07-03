@@ -120,6 +120,7 @@ section{padding:100px 5vw}
 /* ---------- screenshots marquee ---------- */
 .shots{padding:80px 0;background:var(--bg-2);border-top:1px solid var(--line);overflow:hidden}
 .shots .section-head{padding-inline:5vw}
+.marquee-viewport{max-width:1200px;margin:0 auto;padding-inline:5vw;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
 .marquee{display:flex;gap:18px;width:max-content;animation:slide 55s linear infinite}
 .marquee:hover{animation-play-state:paused}
 .marquee img{height:210px;border-radius:12px;border:1px solid var(--line)}
@@ -314,6 +315,7 @@ footer a:hover{color:var(--txt)}
       <span class="kicker">// In-Game</span>
       <h2>Straight from the Battlefield</h2>
     </div>
+    <div class="marquee-viewport">
     <div class="marquee" id="marquee">
       <img src="https://play-lh.googleusercontent.com/CC9k46s3dR_98FkLOcoI1U0wjYedAVfxA1GU98yDccmHGg1sMTE3waeqFFU1h_MbQS2WFn6PZqbLvrYlVA4S=w800-h450" alt="Gun Strike gameplay" loading="lazy">
       <img src="https://play-lh.googleusercontent.com/DvUB4d3Ij9b7PrXoUU3rwOcSXwOYP7S59IER1sLd6YVpKwhqxtTqy639H32ofCoQ1TjBauTKbNBdVDrOd3WI7g=w800-h450" alt="Special Ops gameplay" loading="lazy">
@@ -323,6 +325,7 @@ footer a:hover{color:var(--txt)}
       <img src="https://play-lh.googleusercontent.com/7a5dGVZM2HS_U061QrBfOYeheXwP8x5tlNVbz6xf7S4eJN46VCQ35yDhQ1PnJvzYeCCppbNVyYLZqI3AzmXTyQ=w800-h450" alt="Special Ops gameplay" loading="lazy">
       <img src="https://play-lh.googleusercontent.com/_BfvLupL61a4-FNaIvo8NjWBHSMBw-v7fflSnCLOQJJHJb-OQ3gJqcxhwARf8zrG-DxzrKSkqKdtHM6dFxa4z8M=w800-h450" alt="Zombie 3D gameplay" loading="lazy">
       <img src="https://play-lh.googleusercontent.com/lDAi4TvISLzgBFelFQcG8GO5fB7FjGSUWPw-zHRucD3u_flrsuyP602hA0W8C3R2QNnieYCI32whaX0Dn1Z1=w800-h450" alt="Sniper 3D gameplay" loading="lazy">
+    </div>
     </div>
   </section>
 
