@@ -1,3 +1,10 @@
+# my app-ads.txt BEGIN
+google.com, pub-1196058696795808, DIRECT, f08c47fec0942fa0
+facebook.com, 886252604733049, RESELLER, c3e20eee3f780d68
+# my app-ads.txt END
+
+
+
 # AdInMo app-ads.txt BEGIN
 152media.info, 152M5, RESELLER
 152media.info, 152M608, RESELLER
@@ -1715,9 +1722,3 @@ zmaticoo.com, 5135063, RESELLER
 zmaticoo.com, 5135302, RESELLER
 adinmo.com, 2b907839b9ae407ca507e9471ad35419, DIRECT, c90e99bca95e8939
 # AdInMo app-ads.txt END
-
-
-# my app-ads.txt BEGIN
-google.com, pub-1196058696795808, DIRECT, f08c47fec0942fa0
-facebook.com, 886252604733049, RESELLER, c3e20eee3f780d68
-# my app-ads.txt END
