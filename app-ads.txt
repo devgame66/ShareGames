@@ -1713,5 +1713,10 @@ zmaticoo.com, 115617, DIRECT
 zmaticoo.com, 5135004, RESELLER
 zmaticoo.com, 5135063, RESELLER
 zmaticoo.com, 5135302, RESELLER
-adinmo.com, 5274bf40fe274d5e9c32a8803df41f1b, DIRECT, c90e99bca95e8939
+adinmo.com, 2b907839b9ae407ca507e9471ad35419, DIRECT, c90e99bca95e8939
 # AdInMo app-ads.txt END
+
+
+# admob app-ads.txt BEGIN
+google.com, pub-1196058696795808, DIRECT, f08c47fec0942fa0
+# admob app-ads.txt END
