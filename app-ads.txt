@@ -1,6 +1,4 @@
 # AdInMo app-ads.txt BEGIN
-google.com, pub-1196058696795808, DIRECT, f08c47fec0942fa0
-facebook.com, 886252604733049, RESELLER, c3e20eee3f780d68
 152media.info, 152M5, RESELLER
 152media.info, 152M608, RESELLER
 152media.info, 152M620, RESELLER
